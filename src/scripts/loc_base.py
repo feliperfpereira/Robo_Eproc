@@ -17,7 +17,11 @@ class LocBaseScraper(BaseScraper):
     """
 
     LOCATOR_NAME: str = ''  # Ex: 'MANDADOS - CITAÇÃO/INTIMAÇÃO ELETRÔNICA'
-    SPREADSHEET_ID: str = '1ZoB5WItw1KwY4zIkrfLhAtWmgIDMbLNJRaCSM0Il6po'
+
+    @property
+    def SPREADSHEET_ID(self) -> str:
+        """Retorna o ID da planilha do Google Sheets a partir das configurações."""
+        return settings.GOOGLE_SHEETS_SPREADSHEET_ID
 
     async def run(self, page: Page) -> ScraperResult:
         if not self.LOCATOR_NAME:

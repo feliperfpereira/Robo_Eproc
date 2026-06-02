@@ -1,10 +1,12 @@
+
 import pytest
-from unittest.mock import AsyncMock, patch
-from src.scripts.relatorio_conclusos import RelatorioConclusosScraper
+
+from src.scripts.relatorio_conclusos import RelatorioConclusos
+
 
 @pytest.fixture
 def relatorio_scraper():
-    return RelatorioConclusosScraper()
+    return RelatorioConclusos()
 
 @pytest.mark.asyncio
 async def test_relatorio_conclusos_initialization(relatorio_scraper):

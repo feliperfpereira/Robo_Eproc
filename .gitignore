@@ -222,3 +222,8 @@ logs/
 
 #VS Code
 .vscode/
+
+# Git
+.github/
+.idea/
+.streamlit/
